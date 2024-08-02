@@ -22,6 +22,9 @@ devDependencies:
   "@types/node":
     specifier: ^22.0.3
     version: 22.0.3
+  "@types/web":
+    specifier: ^0.0.153
+    version: 0.0.153
   concurrently:
     specifier: ^8.2.2
     version: 8.2.2
@@ -196,6 +199,13 @@ packages:
       }
     dependencies:
       undici-types: 6.11.1
+    dev: true
+
+  /@types/web@0.0.153:
+    resolution:
+      {
+        integrity: sha512-44quqF1giOIFKorKCzh0ibbr5tTSDuo9fWe7tiZvVi9UK5RVbPTRodt7DbvQUoA5Pb4sZf00tUyJ4IgkeS93zw==,
+      }
     dev: true
 
   /@typescript-eslint/eslint-plugin@8.0.0(@typescript-eslint/parser@8.0.0)(eslint@9.8.0)(typescript@5.5.4):

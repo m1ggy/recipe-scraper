@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky",
-    "build": "tsc",
-    "predev": "pnpm build && node build/scripts/predev.js",
-    "watch": "tsc -w",
+    "build": "rm -rf build && tsc",
+    "predev": "node build/src/scripts/predev.js",
+    "watch": "tsc -w && predev",
     "dev": "pnpm predev && concurrently \"pnpm watch\" \"node build/src/index.js\""
   },
   "keywords": [],
@@ -19,6 +19,7 @@
     "@tsconfig/node22": "^22.0.0",
     "@types/module-alias": "^2.0.4",
     "@types/node": "^22.0.3",
+    "@types/web": "^0.0.153",
     "concurrently": "^8.2.2",
     "eslint": "9.x",
     "eslint-config-prettier": "^9.1.0",
