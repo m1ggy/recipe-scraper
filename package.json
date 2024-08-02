@@ -4,9 +4,34 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky",
+    "build": "tsc",
+    "predev": "pnpm build && node build/scripts/predev.js",
+    "watch": "tsc -w",
+    "dev": "pnpm predev && concurrently \"pnpm watch\" \"node build/src/index.js\""
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.8.0",
+    "@tsconfig/node22": "^22.0.0",
+    "@types/module-alias": "^2.0.4",
+    "@types/node": "^22.0.3",
+    "concurrently": "^8.2.2",
+    "eslint": "9.x",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^15.9.0",
+    "husky": "^9.1.4",
+    "lint-staged": "^15.2.7",
+    "prettier": "3.3.3",
+    "typescript-eslint": "^8.0.0"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
+  "dependencies": {
+    "module-alias": "^2.2.3"
+  }
 }

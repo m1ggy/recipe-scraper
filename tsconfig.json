@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@lib/*": ["lib/*"]
+    },
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "outDir": "build/"
+  },
+  "extends": "@tsconfig/node22/tsconfig.json"
+}
